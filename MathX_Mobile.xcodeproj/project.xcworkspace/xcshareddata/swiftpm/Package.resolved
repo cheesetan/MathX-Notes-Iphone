@@ -1,4 +1,5 @@
 {
+  "originHash" : "3011aa74f1b8b44c7fe185b5ce6a5700a995d1845e3b03481e4e8d8ed95a9d9e",
   "pins" : [
     {
       "identity" : "latexswiftui",
@@ -23,8 +24,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/colinc86/MathJaxSwift",
       "state" : {
-        "revision" : "01797ab2738a8852d70fb81479bcf76768716220",
-        "version" : "3.3.0"
+        "revision" : "e23d6eab941da699ac4a60fb0e60f3ba5c937459",
+        "version" : "3.4.0"
+      }
+    },
+    {
+      "identity" : "networkimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gonzalezreal/NetworkImage",
+      "state" : {
+        "revision" : "2849f5323265386e200484b0d0f896e73c3411b9",
+        "version" : "6.0.1"
       }
     },
     {
@@ -32,8 +42,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/exyte/SVGView",
       "state" : {
-        "revision" : "18bf73efc2f2dede5dfa73f517ddf4e054061294",
-        "version" : "1.0.4"
+        "revision" : "6465962facdd25cb96eaebc35603afa2f15d2c0d",
+        "version" : "1.0.6"
+      }
+    },
+    {
+      "identity" : "swift-cmark",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-cmark",
+      "state" : {
+        "revision" : "b97d09472e847a416629f026eceae0e2afcfad65",
+        "version" : "0.7.0"
       }
     },
     {
@@ -50,10 +69,10 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/gonzalezreal/swift-markdown-ui",
       "state" : {
-        "revision" : "12b351a75201a8124c2f2e1f9fc6ef5cd812c0b9",
-        "version" : "2.1.0"
+        "revision" : "5f613358148239d0292c0cef674a3c2314737f9e",
+        "version" : "2.4.1"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

@@ -43,7 +43,7 @@ struct addNewNoteView: View {
                             showingEquationsFAQ.toggle()
                         } label: {
                             Image(systemName: "questionmark.circle.fill")
-                                .foregroundColor(.blue)
+                                .foregroundColor(Color.tint)
                                 .font(.headline)
                         }
                         .buttonStyle(.plain)
@@ -59,33 +59,31 @@ struct addNewNoteView: View {
                     
                     Spacer()
                     
-                    Button {
-                        withAnimation {
-                            if !noteTitle.isEmpty {
-                                var currentNotesList = noteManager.notes
-                                
-                                currentNotesList.insert(Note(title: noteTitle, latexRendering: noteLatexRendering, dateLastModified: Date()), at: 0)
-                                
-                                let sortedNewNotesList = currentNotesList.sorted(by: { $0.dateLastModified.compare($1.dateLastModified) == .orderedDescending })
-                                
-                                noteManager.notes = sortedNewNotesList
-                                
-                                notesCreated += 1
-                                
-                                dismiss.callAsFunction()
-                            }
+                    if #available(iOS 26.0, *) {
+                        Button {
+                            addNewNote()
+                        } label: {
+                            Text("**Add new Note**")
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .foregroundColor(.white)
                         }
-                    } label: {
-                        Text("**Add new Note**")
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 60)
-                            .foregroundColor(.white)
-                            .background(.blue)
-                            .cornerRadius(16)
+                        .padding(.bottom, 30)
+                        .disabled(noteTitle.isEmpty)
+                        .buttonStyle(.glassProminent)
+                    } else {
+                        Button {
+                            addNewNote()
+                        } label: {
+                            Text("**Add new Note**")
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .foregroundColor(.white)
+                        }
+                        .padding(.bottom, 30)
+                        .disabled(noteTitle.isEmpty)
+                        .buttonStyle(.borderedProminent)
                     }
-                    .buttonStyle(.plain)
-                    .padding(.bottom, 30)
-                    .disabled(noteTitle.isEmpty)
                 }
                 .padding(.top)
                 .padding(.horizontal, 30)
@@ -96,7 +94,6 @@ struct addNewNoteView: View {
                         } label: {
                             Image(systemName: "xmark")
                         }
-                        .tint(.purple)
                     }
                 }
             }
@@ -106,6 +103,24 @@ struct addNewNoteView: View {
                 noteTitle = "Untitled Note \(notesCreated + 1)"
             } else {
                 noteTitle = "Untitled Note"
+            }
+        }
+    }
+
+    func addNewNote() {
+        withAnimation {
+            if !noteTitle.isEmpty {
+                var currentNotesList = noteManager.notes
+
+                currentNotesList.insert(Note(title: noteTitle, latexRendering: noteLatexRendering, dateLastModified: Date()), at: 0)
+
+                let sortedNewNotesList = currentNotesList.sorted(by: { $0.dateLastModified.compare($1.dateLastModified) == .orderedDescending })
+
+                noteManager.notes = sortedNewNotesList
+
+                notesCreated += 1
+
+                dismiss.callAsFunction()
             }
         }
     }

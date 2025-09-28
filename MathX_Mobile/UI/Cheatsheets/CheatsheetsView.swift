@@ -103,7 +103,11 @@ struct CheatsheetsView: View {
                                                         favouritesManager.favourites.insert(Favourite(topicName: topic), at: 0)
                                                     }
                                                 } label: {
-                                                    Image(systemName: favouritesManager.favourites.description.contains(topic) ? "star.slash" : "star")
+                                                    if favouritesManager.favourites.description.contains(topic) {
+                                                        Label("Unfavourite", systemImage: "star.slash")
+                                                    } else {
+                                                        Label("Favourite", systemImage: "star")
+                                                    }
                                                 }
                                                 .tint(.yellow)
                                             }
@@ -124,7 +128,7 @@ struct CheatsheetsView: View {
                     Button {
                         showingFavouritesView.toggle()
                     } label: {
-                        Image(systemName: "star.circle")
+                        Image(systemName: "star")
                     }
                 }
             }

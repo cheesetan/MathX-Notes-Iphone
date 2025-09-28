@@ -43,7 +43,7 @@ struct ReceivedNotePopUp: View {
                                 showingEquationsFAQ.toggle()
                             } label: {
                                 Image(systemName: "questionmark.circle.fill")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(.tint)
                                     .font(.headline)
                             }
                             .buttonStyle(.plain)
@@ -92,7 +92,6 @@ struct ReceivedNotePopUp: View {
                     } label: {
                         Label("Add to Notes", systemImage: "plus")
                     }
-                    .tint(.purple)
                 }
             }
             .navigationTitle("Preview")

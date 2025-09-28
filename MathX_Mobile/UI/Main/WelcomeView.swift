@@ -324,17 +324,30 @@ instead of:
                 noteManager.notes.insert(Note(title: "LaTeX Example Note", content: latexContent, latexRendering: true, dateLastModified: Date()), at: 0)
                 noteManager.notes.insert(Note(title: "Markdown Tutorial", content: markdownContent, latexRendering: false, dateLastModified: Date()), at: 0)
             } label: {
-                HStack {
-                    Text("Proceed to MathX")
-                    Image(systemName: "arrow.right")
+                if #available(iOS 26.0, *) {
+                    HStack {
+                        Text("Proceed to MathX")
+                        Image(systemName: "arrow.right")
+                    }
+                    .padding()
+                    .frame(width: UIScreen.main.bounds.width / 1.5, height: 60)
+                    .fontWeight(.bold)
+                    .font(.headline)
+                    .buttonStyle(.glassProminent)
+                    .shadow(color: .black.opacity(0.25), radius: 3, x: 1, y: 3)
+                } else {
+                    HStack {
+                        Text("Proceed to MathX")
+                        Image(systemName: "arrow.right")
+                    }
+                    .padding()
+                    .frame(width: UIScreen.main.bounds.width / 1.5, height: 60)
+                    .background(.tint)
+                    .fontWeight(.bold)
+                    .font(.headline)
+                    .clipShape(Capsule())
+                    .shadow(color: .black.opacity(0.25), radius: 3, x: 1, y: 3)
                 }
-                .padding()
-                .frame(width: UIScreen.main.bounds.width / 1.5, height: 60)
-                .background(.blue)
-                .fontWeight(.bold)
-                .font(.headline)
-                .clipShape(Capsule())
-                .shadow(color: .black.opacity(0.25), radius: 3, x: 1, y: 3)
             }
             .padding(.top)
         }

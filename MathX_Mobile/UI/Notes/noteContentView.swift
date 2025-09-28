@@ -74,7 +74,7 @@ struct noteContentView: View {
                                 showingEquationsFAQ.toggle()
                             } label: {
                                 Image(systemName: "questionmark.circle.fill")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(.tint)
                                     .font(.title3)
                             }
                             .buttonStyle(.plain)
@@ -146,7 +146,6 @@ struct noteContentView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 ShareLink(item: URL(string: noteURL(base64: convertNoteToBase64(note: note)))!)
-                    .tint(.purple)
             }
             
             ToolbarItem(placement: .navigationBarTrailing) {

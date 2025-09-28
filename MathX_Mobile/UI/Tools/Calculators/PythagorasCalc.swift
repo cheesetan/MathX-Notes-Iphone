@@ -21,7 +21,7 @@ struct PythagorasCalc: View {
                     HStack {
                         Spacer()
                         Triangle()
-                            .foregroundColor(.blue.opacity(0.7))
+                            .foregroundColor(.tint.opacity(0.7))
                             .frame(width: 128, height: 128)
                             .overlay(
                                 Text("A")

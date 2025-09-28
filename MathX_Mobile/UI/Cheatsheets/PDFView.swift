@@ -64,7 +64,7 @@ struct PDFViewer: View {
             }
         }
         .toolbar(UIScreen.main.traitCollection.userInterfaceIdiom == .phone ? .hidden : .visible, for: .tabBar)
-        .ignoresSafeArea(edges: .bottom)
+        .ignoresSafeArea()
         .navigationTitle(topicName)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {

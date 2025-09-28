@@ -149,7 +149,7 @@ struct NotesView: View {
         if searchText.isEmpty {
             return noteManager.notes
         } else {
-            return noteManager.notes.filter { $0.title.lowercased().contains(searchText.lowercased()) }
+            return noteManager.notes.filter { $0.title.localizedStandardContains(searchText)}
         }
     }
 }
