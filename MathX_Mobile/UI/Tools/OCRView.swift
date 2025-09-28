@@ -20,7 +20,7 @@ struct OCRView: View {
                 showingImagePicker = true
             }
             .padding()
-            .background(Color.tint)
+            .background(.tint)
             .foregroundColor(.white)
             .cornerRadius(10)
             .padding()

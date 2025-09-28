@@ -74,7 +74,7 @@ struct noteContentView: View {
                                 showingEquationsFAQ.toggle()
                             } label: {
                                 Image(systemName: "questionmark.circle.fill")
-                                    .foregroundColor(.tint)
+                                    .foregroundColor(.accentColor)
                                     .font(.title3)
                             }
                             .buttonStyle(.plain)

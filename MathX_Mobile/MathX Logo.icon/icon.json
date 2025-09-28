@@ -1,0 +1,129 @@
+{
+  "fill" : {
+    "linear-gradient" : [
+      "display-p3:0.77255,0.54118,1.00000,1.00000",
+      "srgb:0.38824,0.08235,0.87843,1.00000"
+    ]
+  },
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "glass" : false,
+          "image-name" : "mathx Mx.svg",
+          "name" : "mathx Mx",
+          "position" : {
+            "scale" : 8,
+            "translation-in-points" : [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "specular" : false,
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "layers" : [
+        {
+          "blend-mode-specializations" : [
+            {
+              "appearance" : "dark",
+              "value" : "normal"
+            }
+          ],
+          "fill-specializations" : [
+            {
+              "appearance" : "dark",
+              "value" : {
+                "solid" : "display-p3:0.08789,0.08728,0.08752,1.00000"
+              }
+            }
+          ],
+          "hidden-specializations" : [
+            {
+              "value" : true
+            },
+            {
+              "appearance" : "dark",
+              "value" : false
+            }
+          ],
+          "image-name" : "mathx sst logo dark.svg",
+          "name" : "mathx sst logo dark",
+          "position" : {
+            "scale" : 6.5,
+            "translation-in-points" : [
+              325,
+              325
+            ]
+          }
+        },
+        {
+          "blend-mode-specializations" : [
+            {
+              "appearance" : "dark",
+              "value" : "normal"
+            }
+          ],
+          "fill-specializations" : [
+            {
+              "appearance" : "dark",
+              "value" : "none"
+            }
+          ],
+          "hidden-specializations" : [
+            {
+              "value" : false
+            },
+            {
+              "appearance" : "light",
+              "value" : false
+            }
+          ],
+          "image-name" : "mathx SST Logo.svg",
+          "name" : "mathx SST Logo",
+          "position" : {
+            "scale" : 6.5,
+            "translation-in-points" : [
+              325,
+              325
+            ]
+          }
+        },
+        {
+          "glass" : true,
+          "image-name" : "mathx border.svg",
+          "name" : "mathx border",
+          "position" : {
+            "scale" : 9,
+            "translation-in-points" : [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "specular" : false,
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "squares" : "shared"
+  }
+}

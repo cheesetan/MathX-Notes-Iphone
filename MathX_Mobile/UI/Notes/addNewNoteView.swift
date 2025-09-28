@@ -43,7 +43,7 @@ struct addNewNoteView: View {
                             showingEquationsFAQ.toggle()
                         } label: {
                             Image(systemName: "questionmark.circle.fill")
-                                .foregroundColor(Color.tint)
+                                .foregroundColor(.accentColor)
                                 .font(.headline)
                         }
                         .buttonStyle(.plain)

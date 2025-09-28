@@ -43,7 +43,7 @@ struct ReceivedNotePopUp: View {
                                 showingEquationsFAQ.toggle()
                             } label: {
                                 Image(systemName: "questionmark.circle.fill")
-                                    .foregroundColor(.tint)
+                                    .foregroundColor(.accentColor)
                                     .font(.headline)
                             }
                             .buttonStyle(.plain)
